@@ -1,6 +1,5 @@
 package xadrez;
 
-import tabuleiroDoXadrez.Posicao;
 import tabuleiroDoXadrez.Tabuleiro;
 import xadrez.pecas.Rei;
 import xadrez.pecas.Torre;
@@ -33,8 +32,19 @@ public class PartidaDeXadrez {
 	}
 	
 	private void iniciarPartida() {
-		novaPosicaoPeca('b', 6, new Torre(tabuleiro,CorDaPeca.BRANCO));
-		novaPosicaoPeca('e', 8,new Rei(tabuleiro,CorDaPeca.PRETO));
-		novaPosicaoPeca('e',1,new Rei(tabuleiro,CorDaPeca.BRANCO));
+		
+		novaPosicaoPeca('c', 1, new Torre(tabuleiro, CorDaPeca.BRANCO));
+        novaPosicaoPeca('c', 2, new Torre(tabuleiro, CorDaPeca.BRANCO));
+        novaPosicaoPeca('d', 2, new Torre(tabuleiro, CorDaPeca.BRANCO));
+        novaPosicaoPeca('e', 2, new Torre(tabuleiro, CorDaPeca.BRANCO));
+        novaPosicaoPeca('e', 1, new Torre(tabuleiro, CorDaPeca.BRANCO));
+        novaPosicaoPeca('d', 1, new Rei(tabuleiro, CorDaPeca.BRANCO));
+
+        novaPosicaoPeca('c', 7, new Torre(tabuleiro, CorDaPeca.PRETO));
+        novaPosicaoPeca('c', 8, new Torre(tabuleiro, CorDaPeca.PRETO));
+        novaPosicaoPeca('d', 7, new Torre(tabuleiro, CorDaPeca.PRETO));
+        novaPosicaoPeca('e', 7, new Torre(tabuleiro, CorDaPeca.PRETO));
+        novaPosicaoPeca('e', 8, new Torre(tabuleiro, CorDaPeca.PRETO));
+        novaPosicaoPeca('d', 8, new Rei(tabuleiro, CorDaPeca.PRETO));
 	}
 }
